@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: 109804294707.dkr.ecr.eu-north-1.amazonaws.com/my-epick-book
+  tag: "v1.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 80
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "200m"
+    memory: "256Mi"

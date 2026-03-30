@@ -1,0 +1,6 @@
+apiVersion: v2
+name: epick-book
+description: My Epick Book App on AWS EKS
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
