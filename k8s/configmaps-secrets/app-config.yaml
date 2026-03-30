@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  APP_ENV: "production"
+  APP_PORT: "8080"
+  BOOK_API_URL: "http://api.epickbook.com"
+  LOG_LEVEL: "info"

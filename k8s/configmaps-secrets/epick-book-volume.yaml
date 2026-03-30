@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: epick-book-volume
+spec:
+  containers:
+    - name: epick-book-container
+      image: nginx
+      volumeMounts:
+        - name: config-volume        # must match volume name below
+          mountPath: /etc/config     # folder inside container
+        - name: secret-volume        # must match volume name below
+          mountPath: /etc/secrets    # folder inside container
+
+  volumes:
+    - name: config-volume
+      configMap:
+        name: app-config             # your ConfigMap
+    - name: secret-volume
+      secret:
+        secretName: app-secret       # your Secret

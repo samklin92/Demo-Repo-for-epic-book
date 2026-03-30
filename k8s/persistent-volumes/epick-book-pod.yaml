@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: epick-book-pod
+spec:
+  containers:
+    - name: epick-book-container
+      image: nginx
+      volumeMounts:
+        - name: book-storage
+          mountPath: /data/books    # where app writes data
+
+  volumes:
+    - name: book-storage
+      persistentVolumeClaim:
+        claimName: epick-book-pvc   # reference your PVC

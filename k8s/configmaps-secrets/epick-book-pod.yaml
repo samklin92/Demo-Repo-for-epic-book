@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: epick-book-pod
+  labels:
+    app: epick-book
+spec:
+  containers:
+    - name: epick-book-container
+      image: nginx
+      envFrom:
+        - configMapRef:
+            name: app-config        # pulls all keys from ConfigMap
+        - secretRef:
+            name: app-secret        # pulls all keys from Secret

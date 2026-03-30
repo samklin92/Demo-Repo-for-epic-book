@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: epick-book-binding
+  namespace: dev
+subjects:
+  - kind: ServiceAccount
+    name: epick-book-sa       # WHO gets the permissions
+    namespace: dev
+roleRef:
+  kind: Role
+  name: epick-book-role       # WHAT permissions they get
+  apiGroup: rbac.authorization.k8s.io

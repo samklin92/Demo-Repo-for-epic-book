@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: epick-book-pod
+  namespace: dev
+spec:
+  serviceAccountName: epick-book-sa
+  containers:
+    - name: epick-book-container
+      image: nginx
