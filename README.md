@@ -1,11 +1,11 @@
-# 👨‍💻 Samuel Klin  
+# 👨‍💻 Ogaji Igwe Samuel 
 ### 🚀 Production DevOps Platform on AWS — *My Epick Book*
 
 ---
 
 ## 🎯 Project Purpose
 
-This project was designed and built by **Samuel Klin** to simulate a real-world production DevOps environment.
+This project was designed and built by **Ogaji Igwe Samuel** to simulate a real-world production DevOps environment.
 
 It demonstrates how modern engineering teams design, deploy, secure, and monitor applications at scale using cloud-native tools and best practices.
 
